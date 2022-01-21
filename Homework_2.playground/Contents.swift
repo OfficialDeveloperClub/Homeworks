@@ -49,8 +49,6 @@ while blackjack() != 21 || roulette() != ("Red", 13) {
     count += 1
 }
 
-count
-
 // MARK: - Task 3 aka primes count
 
 func primesCount(from: Int, to: Int) -> Int {
@@ -76,7 +74,7 @@ func primesCount(from: Int, to: Int) -> Int {
 import Foundation
 
 let startNaive = Double(DispatchTime.now().uptimeNanoseconds)
-//primesCount(from: 2, to: 100000)
+primesCount(from: 2, to: 100000)
 let diffNaive = (Double(DispatchTime.now().uptimeNanoseconds) - startNaive) / 1e6
 print("Naive solution took \(diffNaive) ms")
 // Naive solution took 3754.766916 ms
@@ -109,10 +107,7 @@ func sieveOfEratosthenes(from: Int, to n: Int) -> Int {
 }
 
 let startSmart = Double(DispatchTime.now().uptimeNanoseconds)
-let countPrimes = sieveOfEratosthenes(from: 2, to: 100000)
-print(countPrimes)
+sieveOfEratosthenes(from: 2, to: 100000)
 let diffSmart = (Double(DispatchTime.now().uptimeNanoseconds) - startSmart) / 1e6
 print("Smart solution took \(diffSmart) ms")
-
 // from 2 to 100000: Smart solution took 655.375541 ms
-
